@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Implementación de reCAPTCHA</title>
+  <!-- Carga la API de reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+</head>
+<body>
+  <form action="procesar.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" required>
+    
+    <!-- Elemento de reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6Lc5UvgqAAAAACJ2sKPyWR7ZsKFCCdfmyxL-i4qe"></div>
+    
+    <br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
