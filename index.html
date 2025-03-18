@@ -2,20 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Implementación de reCAPTCHA</title>
-  <!-- Carga la API de reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  <title>Implementación de hCaptcha</title>
+  <!-- Carga del script de hCaptcha -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
-  <form action="procesar.php" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" required>
-    
-    <!-- Elemento de reCAPTCHA -->
-    <div class="g-recaptcha" data-sitekey="6Lc5UvgqAAAAACJ2sKPyWR7ZsKFCCdfmyxL-i4qe"></div>
-    
+  <!-- Formulario que envía los datos a validate.php -->
+  <form action="validate.php" method="POST">
+    <!-- Recuerda reemplazar "YOUR_SITE_KEY" con tu clave de sitio proporcionada por hCaptcha -->
+    <div class="h-captcha" data-sitekey="70c6c7d0-4478-4ddc-93e6-f84ac692e8a0"></div>
     <br>
-    <input type="submit" value="Enviar">
+    <button type="submit">Enviar</button>
   </form>
 </body>
 </html>
